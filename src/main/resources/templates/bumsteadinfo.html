@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:replace="fragments/coachesEdits::head"></head>
+<body class="body-edit body-size">
+<header th:replace="fragments/log::nav"></header>
+<main>
+    <!------------------------------- CHRIS SECTION -------------------------->
+    <div class="body-text body-text-styler">
+        <div class="body-text-styler" style="background-image: url('/img/coachesPictures/chrisHome.jpg');background-size: 600px 700px;background-repeat: no-repeat;text-shadow: 1px 1px #000000;">
+            <div class="div-coaches">
+                <div style="padding-top: 1em; font-size: 18px; padding-right: 3em; line-height: 1.7;">
+                    <h2 style="text-align: center;">Chris Bumstead</h2>
+                    <p style="padding-top: 5px;">Christopher Adam Bumstead is a Canadian IFBB
+                        professional bodybuilder. He is the reigning Mr. Olympia Classic Physique winner,
+                        having won the competition in 2019, 2020 and 2021. He was also the runner-up
+                        in 2017 and 2018. Often referred to by his nicknames - "CBum", "Daddy".</p>
+                    <p style="padding-top: 10px;">
+                        As the defending champion, it is his title to lose,
+                        but he is certain to not let that happen. By developing a
+                        serious training routine, effective nutrition plan, and efficient
+                        supplementation, Chris is more than ready to defend his title and
+                        continue his bodybuilding dominance.</p>
+                    <p style="padding-top: 10px;">
+                        A lot of Chris Bumstead’s inspiration comes from golden age bodybuilders.
+                        He makes sure to keep his waist and core tight with lean muscle mass.
+                        He hopes to replicate their legacy one day and this path he is
+                        on certainly lends credence to his hopes.</p>
+                    <div sec:authorize="hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')" style="text-align: right; padding-bottom: 10px; padding-top: 60px;">
+                        <a style="text-decoration: none; font-size: 21px; padding-right: 20px;" class="linka dia swoosh" href="/thank-you">
+                            Vote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------- CHRIS INFO ABOUT -------------------------->
+    <div class="flex-parent-element">
+        <div style="position: relative; z-index: 3; font-style: normal; margin-top: 100px; margin-left: 110px; color: #d5f4f0;" class="body-text body-text-styler grow growChris infoElement flex-child-element">
+            <h2 style="margin-top: 9px; text-align: center;">Training Program</h2>
+            <p class="pStyler" style="text-align: left">
+                Chris Bumstead workout routine consists of 5 days a week.
+                During these days, he trains his back, chest,
+                hamstrings/glutes, quads and shoulders.
+            </p>
+            <p class="pStyler" style="text-align: center">
+                <br>Workout Routine
+            </p>
+            <p class="pStyler" style="text-align: left">
+                Back
+                <br>Deadlifts 4 x 10/8/8/Failure,
+                Bent-Over Rows 4 x 12/10/10/8,
+                Machine Rows 3 x 20, Hyper Extensions 2 x Failure,
+                Straight Arm Pulldowns 4 x 12-15.
+            </p>
+            <p class="pStyler" style="text-align: left">
+                Chest/Biceps
+                <br>Incline Dumbell Bench Press 5 x 15/15/12/12/10
+                Smith Machine Bench Press 4 x 12/10/8/8
+                Incline Dumbell Fly’s 3 x 15/12/12
+                Cable Fly’s 3 x 15-12 (Superset)
+                Push Ups 3 x Failure</p>
+            <p class="pStyler" style="text-align: left">
+                Shoulders/Triceps
+                <br>Single Arm Cable (Rear Delts) 4 x 20/15/12/12
+                Upright Rows (Superset) 3 x 15/12/12
+                Rope Face Pulls 3 x 15/12/12
+                Machine Lateral Raises 3 x 15
+                Bench Dips (Superset) 4 x 12-15
+                EZ-Bar Skull Crushers 4 x 12-15</p>
+            <p class="pStyler" style="text-align: left">
+                Quads And Calves
+                <br>Leg Extensions 3 x 15
+                Squats 2 x 8 (Heavy Sets) 6 x 10-12 (Lighter Sets)
+                Leg Press 4 x 40/30/20/10
+                Leg Extensions (Superset) 4 x 15
+                Standing Barbell Lunges 4 x 6-8</p>
+        </div>
+        <div style="position: absolute; z-index: 2; font-style: normal; margin-top: 250px; margin-left: 110px; color: #d5f4f0;" class="body-text body-text-styler grow growChrisNut infoElement flex-child-element">
+            <h2 style="margin-top: 9px; text-align: center;">Nutrition</h2>
+            <p class="pStyler" style="text-align: left">
+                Chris Bumstead is very particular and precise when it comes
+                to his diet, He eats the same 6 meal a day leading up to a competition
+                for multiple months and only makes minor changes. This helps him
+                to determine what his body may need so he can make his small changes
+                to achieve his goal.
+                <br>He utilizes Transparent Lab Products for his Fat Burners, Whey Protein,
+                Testosterone, Creatine, BCAA and Super Greens support. Chris Bumstead says
+                that it’s key to not add in new foods when close to a competition because he
+                is not sure of the effects it can have on his body.
+            </p>
+            <p class="pStyler" style="text-align: left; position: relative;">
+                <br>Meal 1: 1 ½ cup Egg Whites, 2 Whole Eggs and 1 cup Oats
+                <br>Meal 2: 8 ounces Chicken, 1 cup Jasmine Rice and 11 ounces Mixed Vegetables
+                <br>Meal 3: 8 ounces White Fish, 7 ounces Sweet Potato and 11 ounces Mixed Vegetables
+                <br>Meal 4: (Pre workout) 7 ounces White Fish and 2 cups Jasmine Rice
+                <br>Meal 5: (Post Workout Shake) 50g 100% Whey Isolate mixed in Water
+                <br>Meal 6: 8 ounces Chicken, 6 ounces Sweet Potato, 2 ounces Broccoli and 2 ounces Asparagus
+                <br>Meal 7: 2 ½ cups Egg Whites, 3 Whole Eggs and 11 ounces Mixed Vegetables
+            </p>
+            <p class="pStyler" style="text-align: left">
+            Supplements Stack:
+            <br>
+            Omega 3 Fish Oil Tablets, EAA, Magnesium, Creatine
+        </p>
+        </div>
+        <div style="position: absolute; z-index: 1; font-style: normal; margin-top: 400px; margin-left: 110px; color: #d5f4f0;" class="body-text body-text-styler grow growChrisWork infoElement flex-child-element">
+            <h2 style="margin-top: 9px; text-align: center;">Workouts</h2>
+            <p class="pStyler" style="text-align: left">
+                With his mountainous delt span, streamlined torso, tight abs,
+                and dramatic shoulder-to-waist ratio, his physique is an aesthetic
+                masterpiece in the mold of the Apollonian ideal. The Ottawa, Ontario, native has been training and competing for eight years.
+                Check some of his workouts below!
+            </p><div style="text-align: center;">
+            <a style="text-decoration: none; font-size: 21px; padding-right: 20px;" class="linka dia swoosh" href="/workout/withChris">
+                Watch!</a>
+        </div>
+        </div>
+        <div class="div-picture flex-child-element" style="background-image: url('/img/coachesPictures/chrisWorkout.jpg'); position: absolute; z-index: 0;"></div>
+    </div>
+</main>
+</body>
+</html>

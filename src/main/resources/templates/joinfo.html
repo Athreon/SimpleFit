@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:replace="fragments/coachesEdits::head"></head>
+<body class="body-edit body-size">
+<header th:replace="fragments/log::nav"></header>
+<main>
+    <!------------------------------- JO SECTION -------------------------->
+    <div class="body-text body-text-styler">
+        <div class="body-text-styler" style="background-image: url('/img/coachesPictures/joHome.jpg');background-size: 700px 700px;background-repeat: no-repeat;text-shadow: 1px 1px #000000;">
+            <div class="div-coaches">
+                <div style="padding-top: 1em; font-size: 18px; padding-right: 3em; line-height: 1.7;">
+                    <h2 style="text-align: center;">Jo Linder</h2>
+                    <p style="padding-top: 5px; padding-left: 100px;">Jo Linder is a German fitness sensation,
+                        known for his ripped and aesthetic physique. There are a vast
+                        number of videos and pictures of Jo online, showing his commitment to the fitness lifestyle.</p>
+                    <p style="padding-top: 10px; padding-left: 100px;">
+                        When Jo started training, he immediately became fascinated with the results he saw.
+                        Month after month, his physique grew, and so did his passion for fitness.
+                        In recent times, Jo has been working hard on accomplishing new goals in his career.
+                        These include improving his physique even further, along with expanding
+                        his influence as a brand ambassador and online personality.</p>
+                    <p style="padding-top: 10px; padding-left: 100px;">
+                        Eventually, Jo opened his online profiles where he
+                        began sharing training, nutrition, and supplementation advice.
+                        This saw him gain massive amounts of popularity online, allowing
+                        him to start his career as a fitness athlete.</p>
+                    <div sec:authorize="hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')" style="text-align: right; padding-bottom: 10px; padding-top: 30px;">
+                        <a style="text-decoration: none; font-size: 21px; padding-right: 20px;" class="linka dia swoosh" href="/thank-you">
+                            Vote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------- JO INFO ABOUT -------------------------->
+    <div class="flex-parent-element">
+        <div style="position: relative; z-index: 3; font-style: normal; margin-top: 100px; margin-left: 110px; color: #d5f4f0;" class="body-text body-text-styler grow growJo infoElement flex-child-element">
+            <h2 style="margin-top: 9px; text-align: center;">Training Program</h2>
+            <p class="pStyler" style="text-align: left">
+                Jo Lindner favours cardio (like treadmill sprints) which
+                he claims helps him to "relax and refresh". He also loves
+                to do Biceps and Legs Exercise. Jo Lindner has a habit of having
+                3-4 glasses of warm water in the morning, after which he eats boiled
+                eggs and fruits. Here you can Jo Lindner full body exercise chart.
+            </p>
+            <p class="pStyler" style="text-align: center">
+                <br >Workout Routine
+            </p>
+            <p class="pStyler" style="text-align: left">
+                Leg Workout
+                <br>Barbell squats, Barbell walking lunges,
+                <br>Machine donkey calf raise & Hamstring curls
+            </p>
+            <p class="pStyler" style="text-align: left">
+                Arm and shoulder workout
+                <br>Triceps rope pushdowns, Seated dumbbell shoulder press – 240 lbs drop set w/ 180 lbs, Machine preacher curl,
+                Incline barbell press 8-12 reps – 3 sets, Chest press 2 triple drop sets
+            </p>
+            <p class="pStyler" style="text-align: left">
+                Back workout
+                <br>Cable lat pullovers – 4 sets x 6, 6, 6, 6, pause in between,
+                Cable lat pulldowns on incline bench superset w/ low cable row,
+                <br>Reverse grip pulldowns on incline bench – 2 x 12 reps 45-second
+                pause then go to failure, 30-sec pause then go to failure, 15-second
+                pause then go to failure,
+                <br>and 5-second pause then go to failure. This is then done reverse
+                (e.g. start with 5 seconds and work up to 45 seconds,
+                <br>Seated high cable row , V-bar cable pulldowns – 10-12 reps into a drop set
+            </p>
+            <p class="pStyler" style="text-align: left">
+                Quads And Calves
+                <br>Machine Chest Fly’s, Lat Pull Downs, External Dumbbell Shoulder Rotation.
+                Incline Barbell Press, Incline Dumbbell Fly’s, Machine Incline Press. Barbell Landmine Press
+            </p>
+        </div>
+        <div style="position: absolute; z-index: 2; font-style: normal; margin-top: 250px; margin-left: 110px; color: #d5f4f0;" class="body-text body-text-styler grow growJoNut infoElement flex-child-element">
+            <h2 style="margin-top: 9px; text-align: center;">Nutrition</h2>
+            <p class="pStyler" style="text-align: left">
+                Jo Lindner aims to stay around 9% body fat, and he
+                relies on clean eating to help him maintain that number.
+                The German bodybuilder believes in strict dieting to attain his goals,
+                and it’s clearly working. His physique grew massive amounts in five years,
+                and he attributes much of his muscle mass to his diet. Jo Lindner drinks a
+                ton of decaf coffee every day; he’s discovered the sweetness of coffee curbs
+                his cravings and he loves the taste before workouts.
+            </p>
+            <pre class="pStyler" style="text-align: left; position: relative;">                                     Meal 1                                                                     Meal 2
+                      1 liter of decaf coffee with milk                              Omelet of 9 egg whites
+                                                                                                         Brown rice cakes
+                                                                                                         Decaf coffee
+            </pre>
+            <pre class="pStyler" style="text-align: left; position: relative;">                      Meal 3                                                      Meal 4                                          Meal 5
+        Pre-workout shake                                 Post-workout shake                          Crispy chicken
+        5 rice cakes                                             Low-fat milk                                       Sweet potato fries
+                                                                          Green salad or veggies
+            </pre><p class="pStyler" style="text-align: left">
+            Supplements Stack:
+            <br>
+            Omega 3 Fish Oil Tablets, EAA, Magnesium, Creatine
+        </p>
+        </div>
+        <div style="position: absolute; z-index: 1; font-style: normal; margin-top: 400px; margin-left: 110px; color: #d5f4f0;" class="body-text body-text-styler grow growJoWork infoElement flex-child-element">
+            <h2 style="margin-top: 9px; text-align: center;">Workouts</h2>
+            <p class="pStyler" style="text-align: left">
+                Committing to Jo Lindner’s workout routine requires dedication,
+                patience, and a love for fitness and health. Progress takes time, and we have to be patient.
+                If you want to learn something new from Jo check his workouts!
+            </p><div style="text-align: center;">
+                <a style="text-decoration: none; font-size: 21px; padding-right: 20px;" class="linka dia swoosh" href="/workout/withJo">Watch!</a>
+            </div>
+        </div>
+        <div class="div-picture flex-child-element" style="background-image: url('/img/coachesPictures/joWorkout.jpg'); position: absolute; z-index: 0;"></div>
+    </div>
+</main>
+</body>
+</html>

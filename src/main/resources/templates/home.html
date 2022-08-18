@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      xmlns:security="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home | SimpleFit</title>
+    <link rel="stylesheet" href="/css/bodyedits.css">
+    <link rel="stylesheet" href="/css/navbardang.css"/>
+    <link rel="stylesheet" href="/css/textvizualizer.css"/>
+    <link rel="icon" type="image/x-icon" href="/img/icons/webicon.ico">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/641dc6dfe5.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-image: url(/img/carb.jpg); background-repeat: repeat;">
+<header th:replace="fragments/log::nav"></header>
+<main class="home-win" style="height: 2000px; width: 100%;">
+    <h3 class="welcomer">Welcome <span sec:authentication="principal.username"></span></h3><div>
+    <h3 style="padding-left: 950px; padding-top: -25px; margin-top: 32px;" class="welcomer" id="calc-added"></h3>
+    </div>
+    <div class="workout-selector emo-styler flex-container" style="margin-left: 12px;">
+        <div class="text-adjust flex-child magenta"><p class="textior" id="workout-text"></p></div>
+        <div id="video" class="video-adjust flex-child green"></div>
+    </div>
+    <div style="z-index: 9;" class="workout-text bg-blur rounded mt-5 body-text-styler">
+        <h3 style="font-style:italic; font-family: Coda, cursive;"><span style="font-size:22px;">Check workout of the day!</span></h3>
+        <p style="font-family: Coda, cursive;">
+            <span style="font-size:20px;"><span style="text-align: center;">
+                Start your day with our workout of the day selected just for you.
+            </span></span></p>
+    </div>
+    <div sec:authorize="hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')" class="coach-register">
+        <h3 style="font-family: Coda, cursive; text-align: center;">
+            Become a trainer!
+        </h3>
+        <p style="font-family: Coda, cursive; padding-right: 12px; padding-left: 20px;">
+            <span style="font-size:20px; font-style:italic;">
+                Coaching is the practice of assisting people’s learning, helping them to improve and take their performance to the next level. In order for a high level of learning to take place, a suitably good coach needs to be involved.
+                A coach not only acts as a teacher and mentor but can also be a sounding board for ideas, a source of feedback and advice, work as a thinking partner, be a motivator and can bring out the best in a person.
+                </span>
+            <br><br>
+        </p>
+        <p style="font-size:20px; text-align: center; font-family: Coda, cursive;">
+                    Become<a style="font-weight: bold; color: #42c7aa;" class="refan" href="/register/coach"> coach</a> today!
+                </p>
+    </div>
+</main>
+<script src="/js/workout-day.js"></script>
+<script>
+    let nameA=localStorage.getItem("macros");
+
+    document.querySelector("#calc-added").textContent = nameA;
+</script>
+</body>
+</html>

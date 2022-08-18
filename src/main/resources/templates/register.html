@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Register | SimpleFit</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/navbardang.css"/>
+    <link rel="icon" type="image/x-icon" href="/img/icons/webicon.ico">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/641dc6dfe5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header th:replace="fragments/commons::nav"></header>
+<main>
+    <div class="background" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);">
+        <div class="text">
+            <h1>Signup</h1>
+            <p>Have Account? <a href="/login">Login</a></p>
+            <p>Want to be Coach? <a href="/register/coach">Register</a></p>
+        </div>
+        <div class="box">
+            <form id="regForm" class="form" th:action="@{/register}" th:method="POST" th:object="${userRegistrationDTO}">
+                <input type="text"
+                       class="border"
+                       id="username"
+                       name="username"
+                       th:field="*{username}"
+                       th:errorClass="is-invalid"
+                       placeholder="Username *" required>
+                <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="invalid-feedback"></div>
+                <input type="email"
+                       class="border"
+                       id="email"
+                       name="email"
+                       th:field="*{email}"
+                       th:errorClass="is-invalid"
+                       placeholder="Email *" required>
+                <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="invalid-feedback"></div>
+                <input type="password"
+                       class="border"
+                       id="password"
+                       name="password"
+                       th:field="*{password}"
+                       th:errorClass="is-invalid"
+                       placeholder="Password *" required>
+                <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="invalid-feedback"></div>
+                <input type="password"
+                       class="border"
+                       id="confirmPassword"
+                       name="confirmPassword"
+                       th:field="*{confirmPassword}"
+                       th:errorClass="is-invalid"
+                       placeholder="Confirm password *" required>
+                <div th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}" class="invalid-feedback"></div>
+                <select th:field="*{userExperience}" class="dropdown">
+                    <option th:each="userExperience : ${T(com.example.simplefitapp.user.enums.UserExperience).values()}"
+                            th:value="${userExperience}" th:text="${userExperience.displayName}"></option>
+<!--                    <option th:value=1 th:text="Beginner"></option>-->
+<!--                    <option th:value=2 th:text="Advanced"></option>-->
+<!--                    <option th:value=3 th:text="Gymrat"></option>-->
+                </select>
+                <input type="submit" class="button" value="Join">
+                <p id="message"></p>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+</html>

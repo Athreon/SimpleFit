@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BMR Calculator</title>
+    <link rel="stylesheet" href="/css/navbardang.css"/>
+    <link rel="stylesheet" href="/css/bodyedits.css"/>
+    <link rel="stylesheet" href="/css/textvizualizer.css"/>
+    <link rel="stylesheet" href="/css/calculator.css"/>
+    <link rel="icon" type="image/x-icon" href="/img/icons/webicon.ico">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"/>
+    <script src="https://kit.fontawesome.com/641dc6dfe5.js" crossorigin="anonymous"></script>
+</head>
+<!------------------------------------------ NAVIGATION BAR ----------------------------------------->
+<body class="cal-body cal-body-size">
+<header th:replace="fragments/log::nav"></header>
+<main>
+<form method="POST">
+    <div>
+        <h4 class="cal-header">Calorie Calculator</h4>
+        <div class="card-body parent">
+            <div class="gx-3 gy-5">
+                <div class="age field-div child pStyler">
+                    <div>
+                        <h5 class="text-white" style="padding-bottom: 7px;">Age*</h5>
+                        <input class="form-control text-end" name="age" required="" type="number" value="25">
+                    </div>
+                </div>
+                <div class="b-fat child pStyler">
+                    <div>
+                        <h5 class="text-white" style="padding-bottom: 7px;">Body Fat*</h5>
+                        <div class="d-flex align-items-center">
+                            <input class="form-control text-end" name="bodyFat" required="" type="number" value="20">
+                            <span class="btn ms-1 bg-warning">%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gender field-div sec-child pStyler">
+                    <div>
+                        <h5 class="text-white" style="padding-bottom: 7px;">Gender*</h5>
+                        <div>
+                            <div>
+                                <div class="col-6 d-flex align-items-center" style="text-align: center;">
+                                    <input checked="" id="gender_male" name="gender" required="" type="radio" value="0">
+                                    <label class="ms-2 text-nowrap" for="gender_male">Male</label>
+                                </div>
+                                <div class="col-6 d-flex align-items-center">
+                                    <input id="gender_female" name="gender" required="" type="radio" value="1">
+                                    <label class="ms-2 text-nowrap" for="gender_female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="height sec-child pStyler">
+                    <div>
+                        <h5 class="text-white" style="padding-bottom: 7px;">Height*</h5>
+                        <div class="d-flex align-items-center">
+                            <input class="form-control text-end" name="height" required="" type="number" value="180">
+                            <span class="btn ms-1 bg-warning text-nowrap">cm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity third-child pStyler">
+                    <h5 class="text-white" style="padding-bottom: 7px;">Activity*</h5>
+                    <select class="form-select" name="activity" required="">
+                        <option value="1">Basal Metabolic Rate (BMR)</option>
+                        <option value="1.2">Sedentary: little or no exercise</option>
+                        <option value="1.375">Light: exercise 1-3 times/week</option>
+                        <option selected="" value="1.465">Moderate: exercise 4-5 times/week</option>
+                        <option value="1.55">Active: daily exercise or intense exercise 3-4 times/week</option>
+                        <option value="1.725">Very Active: intense exercise 6-7 times/week</option>
+                        <option value="1.9">Extra Active: very intense exercise daily, or physical job</option>
+                    </select>
+                </div>
+                <div class="weight third-child pStyler">
+                    <div>
+                        <h5 class="text-white" style="padding-bottom: 7px;">Weight*</h5>
+                        <div class="d-flex align-items-center">
+                            <input class="form-control text-end" name="weight" required="" type="number" value="65">
+                            <span class="btn ms-1 bg-warning text-nowrap">kg</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="r-unit field-div third-child pStyler">
+                    <div>
+                        <h5 class="text-white" style="padding-bottom: 7px;">Result Unit*</h5>
+                        <div>
+                            <div>
+                                <div class="col-6 d-flex align-items-center">
+                                    <input checked="" id="unit_calories" name="unit" required="" type="radio" value="Calories">
+                                    <label class="ms-2" for="unit_calories">Calories</label>
+                                </div>
+                                <div class="col-6 d-flex align-items-center">
+                                    <input id="unit_kilo" name="unit" required="" type="radio" value="kilojoules">
+                                    <label class="ms-2" for="unit_kilo">kilojoules</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bmr field-div pStyler sec-child">
+                    <div>
+                        <h5 class="text-white" style="padding-bottom: 7px;">BMR estimation formula*</h5>
+                        <div class="row g-3" style="justify-content: center;">
+                            <div class="col-sm-12 d-flex align-items-center">
+                                <input checked="" id="Mifflin_St_Jeor" name="formula" required="" type="radio" value="0">
+                                <label class="ms-2" for="Mifflin_St_Jeor">Mifflin St Jeor</label>
+                            </div>
+                            <div class="col-sm-12 d-flex align-items-center">
+                                <input id="Revised_Harris_Benedict" name="formula" required="" type="radio" value="1">
+                                <label class="ms-2" for="Revised_Harris_Benedict">Harris-Benedict</label>
+                            </div>
+                            <div class="col-sm-12 d-flex align-items-center">
+                                <input id="Katch_McArdle" name="formula" required="" type="radio" value="2">
+                                <label class="ms-2" for="Katch_McArdle">Katch-McArdle</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ans_calculate pStyler"></div>
+        <div class="text-center mt-4 card-footer pStyler">
+            <button class="btn btn-success" onclick="calculateCalorie(this)" type="button">
+                <i class="fas fa-calculator me-3"></i>
+                Calculate
+            </button>
+        </div>
+        <div style="margin-left: 860px; margin-top: -48px; color: wheat;" class="calc-add pStyler"></div>
+    </div>
+</form>
+</main>
+<script src="/js/calculator.js"></script>
+<script src="/js/show.js"></script>
+</body>
+</html>

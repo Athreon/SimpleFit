@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Account Settings</title>
+    <link rel="stylesheet" href="/css/profile.css"/>
+    <link rel="stylesheet" href="/css/navbardang.css"/>
+    <link rel="stylesheet" href="/css/textvizualizer.css"/>
+    <link rel="icon" type="image/x-icon" href="/img/icons/webicon.ico">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"/>
+    <script src="https://kit.fontawesome.com/641dc6dfe5.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #292828;">
+<header th:replace="fragments/log::nav"></header>
+<div class="main-content" style="background-color: #292828;">
+    <div class="container mt-7">
+        <div class="row" style="margin-top: -30px;">
+            <div class="col-xl-8 m-auto order-xl-1">
+                <div class="card bg-secondary shadow">
+                    <div class="card-header bg-white border-0">
+                        <div class="row align-items-center">
+                            <div class="col-8" style="font-family: Coda, cursive;">
+                                <h3 class="mb-0">Account settings</h3>
+                            </div>
+                            <div class="col-4 text-right" style="font-family: Coda, cursive;">
+                                <a href="#!" class="btn btn-sm btn-primary">Save</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form style="font-family: Coda, cursive;">
+                            <h6 class="heading-small text-muted mb-4">User information</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-username">Username</label>
+                                            <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-email">Email address</label>
+                                            <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="email@example.com">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div sec:authorize="hasAnyAuthority('ROLE_ADMIN', 'ROLE_COACH')" class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-first-name">First name</label>
+                                            <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="Last Name *">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-last-name">Last name</label>
+                                            <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last Name *">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="pass">Change Password</label>
+                                            <input type="text" id="pass" class="form-control form-control-alternative" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="passConfirm">Confirm New Password</label>
+                                            <input type="email" id="passConfirm" class="form-control form-control-alternative" placeholder="Password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="oldpass">Old Password Confirmation</label>
+                                            <input type="email" id="oldpass" class="form-control form-control-alternative" placeholder="Old Password">
+                                        </div>
+                                    </div>
+                                <button class="btnpass" name="foo" style="width: 199px; padding-top: 15px; margin-left: 45px; margin-top: 27px; height: 56px; color: black;" type="submit" onclick="savePass()">Change Password</button>
+                                <div id="errormsg" style="display:none"></div>
+                                <span id="error" style="display:none">Password mismatch</span>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <h6 class="heading-small text-muted mb-4">About me</h6>
+                            <div class="pl-lg-4">
+                                <div class="form-group focused">
+                                    <label>About Me</label>
+                                    <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ..."></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div style="margin-bottom: 155px;"></div>
+</footer>
+</body>

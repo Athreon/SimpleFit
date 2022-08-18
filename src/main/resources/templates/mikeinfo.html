@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:replace="fragments/coachesEdits::head"></head>
+<body class="body-edit body-size">
+<header th:replace="fragments/log::nav"></header>
+<main>
+    <!------------------------------- MIKE SECTION -------------------------->
+    <div class="body-text body-text-styler">
+        <div class="body-text-styler" style="background-image: url('/img/coachesPictures/mikeHome.jpg');background-size: 600px 700px;background-repeat: no-repeat;text-shadow: 1px 1px #000000;">
+            <div class="div-coaches">
+                <div style="padding-top: 1em; font-size: 18px; padding-right: 3em; line-height: 1.7;">
+                    <h2 style="text-align: center;">Mike Thurston</h2>
+                    <p style="padding-top: 5px;">Michael George Thurston was born on the 9th of September 1990 and was raised in Leeds,
+                        Yorkshire, England. Mike developed an interest in the field of fitness
+                        when he was a child and started going to the gym at the age of 18 in 2007.</p>
+                    <p style="padding-top: 10px;">By the age of 26, in 2016, Mike had become a personal trainer,
+                        creating a health and fitness company.
+                        But he wasn’t always in the spotlight – Mike spent time working in
+                        retail after graduating from college. But Mike soon grew tired of the demands
+                        of his new job – he didn’t enjoy the working hours
+                        and was forced to cut back on training.
+                        He knew that he’d have to follow his passion if he was to find happiness.
+                        At the age of 22, in 2012, Mike made the big decision to pursue a career in the fitness industry.</p>
+                    <p style="padding-top: 10px;">Mike plans his diet around lean proteins, complex carbs and vegetables.
+                        His favorite healthy meal is chicken or Salmon with sweet potatoes/rice and vegetables.
+                        He tries to eat 6 meals a day to keep his body fueled, and cutting out carbs later on in the day.</p>
+                    <div sec:authorize="hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')" style="text-align: right; padding-bottom: 10px;">
+                        <a style="text-decoration: none; font-size: 21px; padding-right: 20px;" class="linka dia swoosh" href="/thank-you">
+                            Vote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------- MIKE INFO ABOUT -------------------------->
+    <div class="flex-parent-element">
+        <div style="position: relative; z-index: 3; font-style: normal; margin-top: 100px; margin-left: 110px; color: #d5f4f0;" class="body-text body-text-styler grow growMike infoElement flex-child-element">
+            <h2 style="margin-top: 9px; text-align: center;">Training Program</h2>
+            <p class="pStyler" style="text-align: left">
+                Mike changes his training plan every 4-6 weeks so his body doesn’t get used to the same routine and plateau.
+                For most of his workouts, he’ll perform 8-12 reps per set, with 3 sets for most of the exercises.
+            </p>
+            <p class="pStyler" style="text-align: center">
+                <br >Workout Routine
+                <br>Monday – Chest and Back
+                <br>Tuesday – Quads and Calfs
+                <br>Wednesday – Shoulders And Traps
+                <br>Thursday – Hamstrings and Back
+                <br> Friday – Arms
+                <br>Saturday – Abs
+                <br> Sunday – Rest
+            </p>
+            <p class="pStyler" style="text-align: left">
+                Deltoids And Traps Workout
+                <br>Seated Military Press – 4 sets, 1-2 mins rest (3020)
+                Standing Overhead Press – 4 sets, 1-2 mins rest (3020)
+                Seated Lateral Raise – 3 sets (Last 2 sets dropset), 60 sec rest (3011)
+                Upright Row – 3 sets, 1-2 mins rest between superset (2021)
+                Front Raise – 3 sets (1010)
+                Standing Cable Rear Delt Fly – 3 sets, 60 sec rest between superset (3011)
+                Incline DB Rear Delt Fly – 3 sets (2010)
+                Hex Bar Shrugs – 3 sets 1-2 mins rest between sets (1111)
+                DB Shrugs – 3 sets (1010)
+            </p>
+            <p class="pStyler" style="text-align: left">
+                Chest And Triceps
+                <br>Incline dumbbell press 8-12 reps – 3 sets
+                Decline dumbbell flys 8-12 reps – 3 sets (superset with Incline dumbbell flys)
+                Incline barbell press 8-12 reps – 3 sets
+                Chest press 2 triple drop sets
+            </p>
+            <p class="pStyler" style="text-align: left">
+                Arms Training
+                <br>EZ-bar curl – triple drop set
+                Close grip bench press – triple drop set
+                Supersetting scull crushers with alternating bicep curls
+            </p>
+            <p class="pStyler" style="text-align: left">
+                Quads And Calves
+                <br>Slow decent tension squats
+                One legged elevated squats for the hamstrings
+                Barbell hack squats
+                Walking Lunges
+            </p>
+        </div>
+        <div style="position: absolute; z-index: 2; font-style: normal; margin-top: 250px; margin-left: 110px; color: #d5f4f0;" class="body-text body-text-styler grow growMikeNut infoElement flex-child-element">
+            <h2 style="margin-top: 9px; text-align: center;">Nutrition</h2>
+            <p class="pStyler" style="text-align: left">
+                If we think about diet, all our body health depends on what type of diet we prefer to our body,
+                like you need to take care of calories in the diet and many factors like,
+                What should we eat? You must need to know that eating and sleeping is the most important factor in muscle building.
+                Mike never take carbs in morning because he don’t working out in morning.
+                If you are train yourself in morning then it will be better to take high carbs in the morning.
+                Mike’s diet is about lean proteins, complex carbs and vegetables.
+            </p>
+            <pre class="pStyler" style="text-align: left; position: relative;">                                     Meal 1                                                                     Meal 2
+                            Omelette with 4 eggs                                         1 cup of oatmeal
+                            1 slice of bacon                                                   50 grams raspberries
+                            Half an avocado                                                 50 grams blueberries
+                            Tomatoes, dill, onions, mushrooms                30 grams peanut butter
+            </pre>
+            <pre class="pStyler" style="text-align: left; position: relative;">                      Meal 3                                                      Meal 4                                          Meal 5
+        1 scoop of vegan protein                  200 grams of teriyaki salmon               Cooked beef 200g
+        powder mixed with oat                    300 grams rice and broccoli                 A banana
+         milk and fruit.
+            </pre><p class="pStyler" style="text-align: left">
+                Supplements Stack:
+                <br>
+                Omega 3 Fish Oil Tablets, Vitamin D3 tablets, BCAA and Whey Protein
+            </p>
+        </div>
+        <div style="position: absolute; z-index: 1; font-style: normal; margin-top: 400px; margin-left: 110px; color: #d5f4f0;" class="body-text body-text-styler grow growMikeWork infoElement flex-child-element">
+            <h2 style="margin-top: 9px; text-align: center;">Workouts</h2>
+            <p class="pStyler" style="text-align: left">
+                You can check Mike Thurston's Body Part Split Sessions.
+                In these videos he will show you how to train, what exercises he uses,
+                along with how to properly execute each exercise in order to build muscle
+                and get the very most out of your training sessions.
+            </p>
+            <div style="text-align: center;">
+                <a style="text-decoration: none; font-size: 21px; padding-right: 20px;" class="linka dia swoosh" href="/workout/withMike">
+                    Watch!</a>
+            </div>
+        </div>
+        <div class="div-picture flex-child-element" style="position: absolute; z-index: 0;"></div>
+    </div>
+</main>
+</body>
+</html>

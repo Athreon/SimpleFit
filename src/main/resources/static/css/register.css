@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: #000;
+}
+
+div {
+    height: 50%;
+}
+
+.background{
+    background-image: url("/img/leg.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+}
+
+.text, .box{
+    margin-top: 50vh;
+}
+
+.text{
+    position: relative;
+    margin-bottom: 400vh;
+    margin-left: 400px;
+    font-weight: 300px;
+}
+
+.box{
+    position: relative;
+    top: -300px;
+    margin-left: 40px;
+}
+
+.text h1{
+    font-size: 70px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.text p{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.text p a{
+    color: #fff;
+    font-weight: 700;
+}
+
+.form{
+    background: transparent;
+    color: #fff;
+    box-sizing: border-box;
+    width: 200px;
+    font-size: 44px;
+}
+
+input{
+    margin: 20px 0;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+.border {
+    border-bottom: 1px solid #fff;
+    opacity: 90%;
+}
+
+.button{
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    width: 200px;
+}
+
+.button:hover{
+    background: #fff;
+    color: #000;
+    transition: 0.8s;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+.dropdown-container {
+  width: 100px;
+  position: relative;
+}
+
+select {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  color: white;
+  appearance: none;
+  padding-left: 10px;
+  padding-right: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: color 0.4s ease, background-color 0.4s ease, border-bottom-color 0.4s ease;
+}
+
+select:hover,
+select:focus {
+  color: black;
+  background-color: white;
+  border-bottom-color: transparent;
+}
+
+@import 'bootstrap';
+
+.invalid-feedback {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+    color: #e1f041;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+.coach-reg {
+    background: transparent;
+    color: #fff;
+    width: 0px;
+    font-size: 44px;
+}
+
+.invalido {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+    color: #e1f041;
+    padding-left: 231px;
+    margin-bottom: 15px;
+}

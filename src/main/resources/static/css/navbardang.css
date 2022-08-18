@@ -1,0 +1,221 @@
+body {
+  overflow-x: hidden!important; !important!important;
+  font-family: Sans-Serif!important; !important!important;
+  margin: 0!important; !important!important;
+}
+
+.menu-container {
+  position: -webkit-sticky!important;
+  position: sticky!important;
+  top: 0!important;
+  display: flex!important;
+  align-items: center!important;
+  margin-bottom: 1px!important;
+  background: #030303!important;
+  color: #030303!important;
+  padding: 1px!important;
+  z-index: 999!important;
+  -webkit-user-select: none!important;
+  user-select: none!important;
+  box-sizing: border-box!important;
+  border-top-left-radius:15px!important;
+  border-bottom-left-radius:15px!important;
+  border-top-right-radius:15px!important;
+  border-bottom-right-radius:15px!important;
+
+}
+
+
+.menu-logo {
+  line-height: 0!important;
+  margin: 0 10px!important;
+}
+
+.menu-logo img {
+  max-height: 70px!important;
+  max-width: 180px!important;
+  flex-shrink: 0!important;
+}
+
+.menu-container a {
+  text-decoration: none!important;
+  color: #4a4a4a!important;
+  transition: color 0.5s ease!important;
+}
+
+.menu-container a:hover {
+  color: #88ada7!important;
+}
+
+.menu-container input {
+  display: block!important;
+  width: 35px!important;
+  height: 25px!important;
+  margin: 0!important;
+  position: absolute!important;
+  cursor: pointer!important;
+  opacity: 0!important; /* hide this */
+  z-index: 2!important; /* and place it over the hamburger */
+  -webkit-touch-callout: none!important;
+}
+
+/* Burger menu */
+.menu-container span {
+  display: block!important;
+  width: 33px!important;
+  height: 4px!important;
+  margin-bottom: 5px!important;
+  position: relative!important;
+  background: #cac0c0!important;
+  border-radius: 3px!important;
+  z-index: 1!important;
+  transform-origin: 4px 0px!important;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  opacity 0.55s ease!important;
+}
+
+.menu-container span:first-child {
+  transform-origin: 0% 0%!important;
+}
+
+.menu-container span:nth-child(3) {
+  transform-origin: 0% 100%!important;
+}
+
+.menu-container input:checked ~ span {
+  opacity: 1!important;
+  transform: rotate(45deg) translate(3px,-1px)!important;
+  background: #4a4a4a!important;
+}
+
+.menu-container input:checked ~ span:nth-child(4) {
+  opacity: 0!important;
+  transform: rotate(0deg) scale(0.2, 0.2)!important;
+}
+
+.menu-container input:checked ~ span:nth-child(3) {
+  transform: rotate(-45deg) translate(-5px,11px)!important;
+}
+
+.menu ul {
+  list-style: none!important;
+}
+
+.menu li {
+  padding: 10px 0!important;
+  font-size: 22px!important;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 841px) {
+  .menu-container {
+    flex-direction: column!important;
+    align-items: flex-start!important;
+  }
+
+  .menu-logo {
+    position: absolute!important;
+    right: 0!important;
+    top: 50%!important;
+    transform: translateY(-50%)!important;
+  }
+
+  .menu-logo img {
+    max-height: 30px!important;
+  }
+
+  .menu {
+    position: center!important;
+    box-sizing: border-box!important;
+    width: 300px!important;
+    left: -300px!important;
+    top: 0!important;
+    margin: -20px!important;
+    padding: 75px 50px 50px!important;
+    background: #cac0c0!important;
+    -webkit-font-smoothing: antialiasing!important;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%!important;
+    transform: translateX(0%)!important;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0)!important;
+  }
+
+  .menu-container input:checked ~ .menu {
+    transform: translateX(100%)!important;
+  }
+}
+
+/* desktop styles */
+@media only screen and (min-width: 842px) {
+  .menu-container {
+    width: 100%!important;
+  }
+
+  .menu-container a {
+    color: #cac0c0!important;
+  }
+
+  .menu-container input {
+    display: none!important;
+  }
+
+  /* Burger menu */
+  .menu-container span {
+    display: none!important;
+  }
+
+  .menu {
+    font-family: Coda, cursive!important;
+    font-weight: bold!important;
+    font-style: italic!important;
+    text-align: center!important;
+    font-size: 5px!important;
+    color: rgb(255, 255, 255)!important;
+    text-shadow: rgb(97, 160, 255) 1px 1px 1px!important;
+    position: relative!important;
+    width: 100%!important;
+    display: flex!important;
+    justify-content: space-between!important;
+  }
+
+  .menu ul {
+    display: flex!important;
+    padding: 0!important;
+  }
+
+  .menu li {
+    padding: 0 20px!important;
+  }
+}
+
+.dropbtn {
+  color: white!important;
+  padding: 12px!important;
+  border: none!important;
+  cursor: pointer!important;
+}
+
+.dropdown {
+  position: relative!important;
+  display: inline-block!important;
+}
+
+.dropdown-content {
+  padding-top: 18px!important;
+  display: none!important;
+  position: absolute!important;
+  min-width: 140px!important;
+  z-index: 1!important;
+}
+
+.dropdown-content a {
+  color: #ffffff!important;
+  padding: 8px 10px!important;
+  text-decoration: none!important;
+  display: block!important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block!important;
+}

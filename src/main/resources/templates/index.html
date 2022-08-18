@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head"></head>
+<body class="body-edit body-size">
+<header th:replace="fragments/commons::nav"></header>
+<main>
+
+    <!------------------------------- WELCOME SECTION -------------------------->
+    <div class="body-text bg-blur rounded mt-5 body-text-styler">
+        <h3 style="font-style:italic;"><span style="font-size:22px;">Welcome!</span></h3>
+        <hr class="line-between-style"/>
+        <p style="font-family: Coda, cursive;">
+            <span style="font-size:20px;"><span style="text-align: center;">
+         Here you can find information on how to perform various exercises
+        for different muscle groups and scientific proven information related to dieting.
+        Also, try out our calorie needs calculator to give you a caloric baseline.
+
+        Don't forget our verified <a style="font-weight: bold; color: #42c7aa;" class="refan" href="/login">coaches</a>
+                where you can vote for your favourite trainer.
+            </span></span></p>
+        <hr class="line-between-style"/>
+        <h3 style="font-family: Coda, cursive;"><span style="font-size:18px;">
+            if you have an account
+            <a style="color: #42c7aa; font-weight: bold;" class="refan" href="/login">Login</a>
+            or
+            <a style="color: #42c7aa; font-weight: bold;" class="refan" href="/register">Register</a>
+            if you are not member.
+        </span></h3>
+    </div>
+
+    <!------------------------------- PROGRAMS SECTION -------------------------->
+    <h3 style="font-size:23px; text-shadow: 1px 1px #000000;" class="check body-text-styler">Programs</h3>
+<div class="div-background">
+    <div class="body-text-styler container " style="text-shadow: 1px 1px #000000;">
+        <div class="div-programs flexor" style="background-image: url('/img/wells.jpg');">
+            <div style="padding-top: 4em; font-size: 18px;">
+                <h2>Social health and wellness</h2>
+                <p style="padding-left: 2em; padding-top: 1em; padding-right: 2em;">Manage physical health and social wellbeing. Wellness is the act of practicing healthy habits
+                    on a daily basis to attain better physical and mental health outcomes,
+                    so that instead of just surviving, you’re thriving.</p>
+                <div>
+                    <a style="text-decoration: none;" class="link dline" href="/wellness">Read more..</a>
+                </div>
+            </div>
+        </div>
+        <div class="div-programs flexor" style="background-image: url('/img/recipe.jpg');">
+            <div>
+                <div style="padding-top: 4em; font-size: 18px; text-shadow: 1px 1px #000000;">
+                    <h2>Healthy Recipes</h2>
+                    <p style="padding-left: 2em; padding-top: 1em; padding-right: 2em; text-shadow: 1px 1px #000000;">
+                        Our choices of food and recipes have a huge impact on our health and wellness. A good starting
+                        point for better health and fitness is the way you cook. Maintaining a healthy diet at home can be a challenge for many families,
+                        especially when they contain picky eaters.</p>
+                    <div>
+                        <a style="text-decoration: none; text-shadow: 1px 1px #000000;" class="link dline" href="/recipes">Read more..</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body-text-styler container" style="text-shadow: 1px 1px #000000;">
+        <div class="div-programs flexor" style="background-image: url('/img/coachesPictures/mikey.jpg');">
+            <div style="padding-top: 14em; font-size: 18px;">
+                <h2>Workout videos</h2>
+                <p style="padding-left: 2em; padding-right: 2em;">Want to work out but don't know where to begin?
+                    Start your journey with our certified personal trainers, who will guide you in every way
+                    including how to calculate macros.
+                </p>
+                <div>
+                    <a style="text-decoration: none;" class="link dline" href="/workout">Read more..</a>
+                </div>
+            </div>
+        </div>
+        <div class="div-programs flexor" style="background-image: url('/img/wplan.jpg');">
+            <div>
+                <div style="padding-top: 3em; font-size: 18px; text-shadow: 1px 1px #000000;">
+                    <h2>Workout programs</h2>
+                    <p style="padding-left: 2em; padding-right: 2em; text-shadow: 1px 1px #000000;">
+                        A written workout plan not only provides a layout for the day,
+                        but it also sets up the big picture for weeks or months to come.
+                        Established plan dictates the work that must be done in order to reach the goal.
+                    <div>
+                        <a style="text-decoration: none; text-shadow: 1px 1px #000000;" class="link dline" href="/programs">Read more..</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------- COACHES SECTION -------------------------->
+    <h3 style="font-size:23px; text-shadow: 1px 1px #000000; padding-top: 1.5em; padding-left: 31em;" class="body-text-styler">Coaches</h3>
+
+    <div class="body-text-styler container" style="height: 810px; text-shadow: 1px 1px #000000;">
+        <div class="coaches-cards flexor" style="background-image: url('/img/coachesPictures/cbm.png'); background-size: cover;">
+            <div>
+                <h2>Chris Bumstead</h2>
+                <p style="padding-top: 440px; padding-left: 5px; padding-right: 5px;">
+                    Canadian IFBB professional bodybuilder.
+                    Bumstead is the reigning Mr. Olympia Classic Physique winner,
+                    having won the competition in 2019, 2020 and 2021.
+                </p>
+                <button type="button" onclick="window.location.href='/coaches/bumsteadinfo'" class="raise">Read</button>
+            </div>
+        </div>
+        <div class="coaches-cards flexor" style="background-image: url('/img/coachesPictures/jom.jpg'); background-size: cover;">
+            <div>
+                <div>
+                    <h2>Jo Lindner</h2>
+                    <p style="padding-top: 415px; padding-left: 4px; padding-right: 4px;">
+                        Jo Lindner from Germany is a successful bodybuilder Celebrity.
+                        Currently, his wonderful physique is inspiring tons of people all around the world.
+                        He creates tailored training systems for budding bodybuilders.
+                    </p>
+                    <button type="button" onclick="window.location.href='/coaches/joinfo'" class="raise">Read</button>
+                </div>
+            </div>
+        </div>
+        <div class="coaches-cards flexor" style="background-image: url('/img/coachesPictures/mikem.jpg'); background-size: cover;">
+            <div>
+                <h2>Mike Thurston</h2>
+                <p style="padding-top: 390px; padding-left: 5px; padding-right: 5px;">
+                    Mike Thurston is a young famous YouTuber and Social Media Influencer who was born in England.
+                    His goal is to educate, to motivate, and to help people optimise their body composition,
+                    whilst making the process as enjoyable and sustainable as possible.
+                </p>
+                <button type="button" onclick="window.location.href='/coaches/mikeinfo'" class="raise">Read</button>
+            </div>
+        </div>
+    </div>
+<footer th:replace="fragments/commons::footer"></footer>
+</div>
+</main>
+</body>
+</html>

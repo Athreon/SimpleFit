@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SimpleFit</title>
+    <link rel="stylesheet" href="/css/navbardang.css"/>
+    <link rel="stylesheet" href="/css/bodyedits.css"/>
+    <link rel="stylesheet" href="/css/textvizualizer.css"/>
+    <link rel="icon" type="image/x-icon" href="/img/icons/webicon.ico">
+
+    <!---------------------------------     FONTS     -------------------------------->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"/>
+    <script src="https://kit.fontawesome.com/641dc6dfe5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+    <nav class="menu-container">
+        <input type="checkbox" aria-label="Toggle menu"/>
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <a href="/" class="menu-logo">
+            <img src="/img/slogo.png" alt=""/>
+        </a>
+        <div class="menu">
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <a href="/login" class="dropbtn">Coaches</a>
+                    </div>
+                </li>
+<!--                <li>-->
+<!--                    <a href="/login">-->
+<!--                        Workout-->
+<!--                    </a>-->
+<!--                </li>-->
+                <li>
+                    <a href="/login">
+                        Diet
+                    </a>
+                </li>
+                <li>
+                    <a href="/login">
+                        <i class="fa fa-light fa fa-calculator"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="/login">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a href="/register">
+                        Sign-up
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<footer class="footer bg-transparent py-2" style="position: bottom;">
+    <div class="container-fluid text-center">
+        <div class="footer-background h7 text-white fixed-bottom" style="color: white">
+            &copy; Kristiyan Shumanski.
+        </div>
+    </div>
+</footer>
+</body>
+</html>

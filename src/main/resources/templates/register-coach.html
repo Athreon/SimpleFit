@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Register | SimpleFit</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/navbardang.css"/>
+    <link rel="icon" type="image/x-icon" href="/img/icons/webicon.ico">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/641dc6dfe5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header th:replace="fragments/commons::nav"></header>
+<main>
+    <div class="background" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);">
+        <div class="text">
+            <h1>Signup</h1>
+            <p>Have Account? <a href="/login">Login</a></p>
+            <p>User Registration? <a href="/register">Register</a></p>
+        </div>
+        <div class="box">
+            <form id="regForm" class="coach-reg" th:action="@{/register/coach}" th:method="POST" th:object="${coachRegistrationDTO}">
+                <input type="text"
+                       class="border"
+                       id="username"
+                       name="username"
+                       style="float:left;"
+                       th:field="*{username}"
+                       th:errorClass="is-invalid"
+                       placeholder="Username *" required>
+                <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="invalido"></div>
+                <input type="email"
+                       class="border"
+                       id="email"
+                       style="float:left;"
+                       name="email"
+                       th:field="*{email}"
+                       th:errorClass="is-invalid"
+                       placeholder="Email *" required>
+                <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="invalido"></div>
+                <input type="text"
+                       class="border"
+                       id="firstName"
+                       style="float:right; margin-right: 26px; margin-top: -140px;"
+                       name="firstName"
+                       th:field="*{firstName}"
+                       th:errorClass="is-invalid"
+                       placeholder="First Name *" required>
+                <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="invalid-feedback"></div>
+                <input type="text"
+                       class="border"
+                       id="lastName"
+                       style="float:right; margin-top: -60px; margin-right: 25px;"
+                       name="lastName"
+                       th:field="*{lastName}"
+                       th:errorClass="is-invalid"
+                       placeholder="Last Name *" required>
+                <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="invalid-feedback"></div>
+                <input type="number"
+                       class="border"
+                       id="age"
+                       style="float:right; margin-right: 26px; margin-top: 20px;"
+                       name="age"
+                       th:field="*{age}"
+                       th:errorClass="is-invalid"
+                       placeholder="Age *" required>
+                <div th:if="${#fields.hasErrors('age')}" th:errors="*{age}" class="invalid-feedback"></div>
+                <input type="password"
+                       class="border"
+                       id="password"
+                       name="password"
+                       th:field="*{password}"
+                       th:errorClass="is-invalid"
+                       placeholder="Password *" required>
+                <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="invalid-feedback"></div>
+                <input type="password"
+                       class="border"
+                       id="confirmPassword"
+                       name="confirmPassword"
+                       th:field="*{confirmPassword}"
+                       th:errorClass="is-invalid"
+                       placeholder="Confirm password *" required>
+                <div th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}" class="invalid-feedback"></div>
+                <input type="submit" class="button" value="Join">
+                <p id="message"></p>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+</html>

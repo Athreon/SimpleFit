@@ -1,0 +1,220 @@
+.body-edit {
+background-image: url("/img/coachesPictures/bumsbg.jpg"), url("/img/carb.jpg");
+background-color: black;
+background-size: 100%;
+background-position: 0px 20px;
+background-repeat: no-repeat, repeat;
+}
+
+.home-win {
+background-image: url("/img/coachesPictures/mikeHomePic.jpg");
+background-size: 100%;
+background-position: 0px 58px;
+background-repeat: no-repeat;
+}
+
+.welcomer {
+    font-family: Coda, cursive;
+    justify-content: space-between;
+    text-align: center;
+    word-spacing: 1px;
+    color: white;
+    margin-top: 40px;
+    font-style: italic;
+    margin-bottom: -60px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+.workout-text {
+    margin-top: -800px;
+    margin-left: 30%;
+    width: 40%;
+    border: 1px solid #D6B4B4;
+    border-color: white;
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.52);
+    -webkit-font-smoothing: antialiasing;
+    color: #ffffff;
+    line-height: 1.5;
+    padding-bottom: 15px;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.workout-selector {
+    margin-top: 946px;
+    margin-right: 67px;
+    padding-right: 85px;
+    width: 1400px;
+    height: 700px;
+    border-color: white;
+    color: #ffffff;
+    line-height: 1.5;
+    padding-bottom: 37px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.video-adjust {
+    margin-top: 110px;
+    margin-right: -62px;
+}
+
+.text-adjust {
+    margin-left: 18px;
+    margin-top: 110px;
+    margin-right: -62px;
+    padding-right: 85px;
+    width: 1400px;
+    height: 567px;
+    border: 1px solid #D6B4B4;
+    border-top-width: 1px;
+    border-color: white;
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.52);
+    -webkit-font-smoothing: antialiasing;
+    color: #ffffff;
+    line-height: 1.5;
+    padding-bottom: 37px;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.coach-register {
+    margin-top: 690px;
+    margin-left: 17%;
+    width: 66%;
+    height: 13%;
+    border: 1px solid #D6B4B4;
+    border-color: white;
+    color: #ffffff;
+    line-height: 1.5;
+    padding-bottom: 15px;
+    background-color: rgba(0, 0, 0, .7);
+    vertical-align: middle;
+}
+
+.textior {
+    margin-left: 18px;
+    margin-top: 28px;
+    margin-right: -62px;
+    font-size: 19px;
+    text-align: justify;
+}
+
+.emo-styler {
+    font-family: Coda, cursive;
+    justify-content: space-between;
+    line-height: 28px;
+    word-spacing: 1px;
+    color: white;
+}
+
+.body-size {
+  height: 2000px;
+  width: 100%;
+}
+
+.line-between-style {
+    border: 0px;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+}
+
+.check {
+    margin-top: 75px;
+    margin-left: 370px;
+    width: 50%;
+    color: #EAE4E4;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3;
+
+}
+
+.body-text {
+    margin-top: 85px;
+    margin-left: 300px;
+    width: 60%;
+    border: 1px solid #D6B4B4;
+    border-radius: 50px;
+    border-color: white;
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.52);
+    -webkit-font-smoothing: antialiasing;
+    color: #EAE4E4;
+    line-height: 1.5;
+    padding-bottom: 26px;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.container {
+   display: flex;
+}
+
+.flexor {
+   flex: 1;
+}
+
+.div-background {
+    background-image: url("/img/carb.jpg");
+}
+
+.div-programs {
+    width: 50%;
+    margin: 0.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+
+    border: 1px solid #D6B4B4;
+    border-color: transparent;
+    color: #EAE4E4;
+    line-height: 1.5;
+    padding-bottom: 26px;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.coaches-cards {
+    flex-basis: 600px;
+    height: 650px;
+    margin: 40px;
+    width: 50%;
+    border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.52);
+    color: #EAE4E4;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    background: transparent;
+    clear: both;
+    text-align: center;
+    position: static;
+}
